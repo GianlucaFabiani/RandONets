@@ -1,5 +1,6 @@
 # RandONet MATLAB TOOLBOX
-# Random projection-based Operator Networks
+Random projection-based Operator Networks
+======
 RandONet - MATLAB Code (J. Comp. Phys).  RandONet (Random projection-based Operator Network) is a MATLAB implementation designed for learning efficiently linear and nonlinear operators using randomized neural networks.
 
 &#x1F4D8;**Fabiani, G., Kevrekidis, I. G., Siettos, C., Yannacopoulos, A. N., RandONet: Shallow Networks with Random Projections for learning linear and nonlinear operators. J Comp Phys, (Accepted 10 sept 2024)**
@@ -17,13 +18,15 @@ Keywords: RandONets - Machine Learning - Random Projections  - Shallow Neural Ne
 DISCLAIMER:
 This software is provided "as is" without warranty of any kind.
 
-# Abstract
+Abstract
+=====
 Deep neural networks have been extensively used for the solution of both the forward and the inverse problem for dynamical systems. However, their implementation necessitates optimizing a high-dimensional space of parameters and hyperparameters. This fact, along with the requirement of substantial computational resources, poses a barrier to achieving high numerical accuracy.
 Here, to address the above challenges, we present Random Projection-based Operator Networks (RandONets): shallow networks with random projections and niche numerical analysis algorithms that learn linear and nonlinear operators. The implementation of RandONets involves: (a) incorporating random bases, thus enabling the use of shallow neural networks with a single hidden layer, where the only unknowns are the output weights of the network's weighted inner product; this reduces dramatically the dimensionality of the parameter space; and, based on this, (b) using niche numerical analysis techniques to solve a least-squares problem (e.g., Tikhonov regularization and preconditioned QR decomposition) that offer superior numerical approximation properties compared to other optimization techniques used in deep-learning.
 In addition, we prove the universal approximation accuracy of RandONets for approximating linear and nonlinear operators. Furthermore, we demonstrate their efficiency in approximating linear and nonlinear evolution operators (right-hand-sides (RHS)) with a focus on PDEs. 
 We show, that for this particular task, RandONets outperform both in terms of numerical approximation accuracy and computational cost, by several orders of magnitudes (~10 orders of magnitudes, up to machine precision) the ``vanilla" DeepONets. Hence, we believe that our method will trigger further developments in the field of scientific machine learning, for the development of new `'light'' machine learning schemes that will provide high accuracy while reducing dramatically the computational costs.
 
-# Matlab Examples
+Matlab Examples
+==========
 
 The main function (i.e. the training) is train_RandONet.m
 
@@ -34,7 +37,8 @@ Here, we provide 5 examples/demos:
 4) Nonlinear PDE Viscous Burgers' Equation (main_RandDeepOnet_burgers.m)
 5) Nonlinear PDE Allen-Cahn Equation (main_RandDeepOnet_AllenCahn.m)
 
-# Description of the Problem
+Description of the Problem
+========
 In this study, we focus on the challenging task of learning linear and nonlinear functional operators $\mathcal{F}:\mathsf{U} \rightarrow \mathsf{V}$ which constitute maps between two infinite-dimensional function spaces $\mathsf{U}$ and $\mathsf{V}$. Here, for simplicity, we consider both $\mathsf{U}$ and $\mathsf{V}$ to be subsets of the set $\mathsf{C}(\R^d)$ of continuous functions on $\R^d$. The elements of the set $\mathsf{U}$ are functions $u:\mathsf{X}\subseteq \R^d\rightarrow \R$ that are transformed to other functions $v=\mathcal{F}[u]:\mathsf{Y}\subseteq \R^d \in \R$ through the application of the operator $\mathcal{F}$. We use the following notation for an operator evaluated at a location $\bm{y} \in \mathsf{Y}\subseteq \mathbb{R}^d$
 \begin{equation}
     v(\bm{y})=\mathcal{F}[u](\bm{y}).
@@ -46,8 +50,9 @@ Although our objective is to learn functional operators from data, which take fu
 
 Regarding the availability of data for the output function, we encounter two scenarios. In the first scenario, the functions in the output are known at the same fixed grid ${\bm{y}_1, \bm{y}_2,\dots,\bm{y}_{n}}$, where $y_i \in Y$; this case is termed as ``aligned" data. Conversely, there are cases where the output grid may vary randomly for each input function, known as ``unaligned" data. If this grid is uniformly sampled and dense enough, interpolation can be used to approximate the output function at fixed locations. Thus, this leads us back to the aligned data case. However, if the output is only available at sparse locations, interpolation becomes impractical. As explained in the paper, despite this challenge, our approach can address this scenario, albeit with a higher computational cost for training the machine learning model (since, in such cases, the fixed structure of the data cannot be fully leveraged).
 
-# Documentation of the Code
-  We provide an user-friendly and MATLAB-friendly software for learning Linear and Nonlinear Operators using RandONets. The Random projection-based algorithm is a fast and efficient machine learning algorithm for function approximation.
+Documentation of the Code
+=====
+We provide an user-friendly and MATLAB-friendly software for learning Linear and Nonlinear Operators using RandONets. The Random projection-based algorithm is a fast and efficient machine learning algorithm for function approximation.
   
 **train_RandONet.m** trains a Random Projection-based Operator Network (RandONet) model.
 
