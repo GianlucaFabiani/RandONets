@@ -6,12 +6,13 @@ arxiv at: https://doi.org/10.48550/arXiv.2406.05470
 
 Last revised by G. Fabiani, September 11, 2024
 
-We present a numerical method based on ``random projections`` with ``Gaussian kernels`` and ``physics-informed neural networks`` for the solution of initial value problems (IVP) of nonlinear STIFF ODEs and index-1 DAEs, which may also arise from the spatial discretization of PDEs.
+We present a machine learning method based on ``random projections`` with ``Johnson-Lindenstrauss`` and/or ``Random Fourier Features`` for efficiently learning linear and nonlinear operators.
+
+⭐🔍 **IMPORTANTLY**: We rigorously and theoretically prove the universal approximation of nonlinear operators with RandONets, extending the proof of Chen and Chen (1995) ✏️🔥
 
 The efficiency of the scheme is compared against [DeepXDE/DeepOnet python library](https://github.com/lululxvi/deepxde) that implements, among others, deep-learning operator networks.
 
 Keywords: RandONets - Machine Learning - Random Projections  - Shallow Neural Networks -  Approximation of Linear and Nonlinear Operators - Differential Equations - Evolution Operators - DeepONet - Numerical Analysis
-
 
 DISCLAIMER:
 This software is provided "as is" without warranty of any kind.
