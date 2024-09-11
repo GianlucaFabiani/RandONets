@@ -6,6 +6,8 @@ arxiv at: https://doi.org/10.48550/arXiv.2406.05470
 
 Last revised by G. Fabiani, September 11, 2024
 
+<img src="https://raw.githubusercontent.com/GianlucaFabiani/RandONets/main/images/Schematic_RandOnet_details_colored.jpg" alt="Schematic of RandOnet" width="600"/>
+
 We present a machine learning method based on ``random projections`` with ``Johnson-Lindenstrauss (JL)`` and/or Rahimi and Recht (2007) ``Random Fourier Features (RFFN)`` for efficiently learning linear and nonlinear operators.
 
 ⭐🔍 **IMPORTANTLY**: We rigorously and theoretically prove the universal approximation of nonlinear operators with RandONets, extending the proof of Chen and Chen (1995) ✏️🔥
@@ -16,8 +18,6 @@ Keywords: RandONets - Machine Learning - Random Projections  - Shallow Neural Ne
 
 DISCLAIMER:
 This software is provided "as is" without warranty of any kind.
-
-<img src="https://raw.githubusercontent.com/GianlucaFabiani/RandONets/main/images/Schematic_RandOnet_details_colored.jpg" alt="Schematic of RandOnet" width="600"/>
 
 Abstract
 =====
