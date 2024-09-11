@@ -6,7 +6,7 @@ arxiv at: https://doi.org/10.48550/arXiv.2406.05470
 
 Last revised by G. Fabiani, September 11, 2024
 
-We present a machine learning method based on ``random projections`` with ``Johnson-Lindenstrauss`` and/or ``Random Fourier Features`` for efficiently learning linear and nonlinear operators.
+We present a machine learning method based on ``random projections`` with ``Johnson-Lindenstrauss (JL)`` and/or Rahimi and Recht (2007) ``Random Fourier Features (RFFN)`` for efficiently learning linear and nonlinear operators.
 
 ⭐🔍 **IMPORTANTLY**: We rigorously and theoretically prove the universal approximation of nonlinear operators with RandONets, extending the proof of Chen and Chen (1995) ✏️🔥
 
@@ -47,7 +47,7 @@ By effectively learning (discovering from data) such nonlinear operators, we see
 
 Although our objective is to learn functional operators from data, which take functions ($u$) as input, we must discretize them to effectively represent them and be able to apply network approximations. One practical approach, as implemented in the DeepONet framework, is to use the function values ($u(x_j)$) at a sufficient, but finite, number of locations ${x_1, x_2, \dots , x_m}$, where $x_j \in \mathsf{X}\subseteq\mathbb{R}^d $; these locations are referred to as ``sensors."
 
-Regarding the availability of data for the output function, we encounter two scenarios. In the first scenario, the functions in the output are known at the same fixed grid ${y_1, y_2,\dots,y_{n}}$, where $y_i \in Y$; this case is termed as ``aligned" data. Conversely, there are cases where the output grid may vary randomly for each input function, known as ``unaligned" data. If this grid is uniformly sampled and dense enough, interpolation can be used to approximate the output function at fixed locations. Thus, this leads us back to the aligned data case. However, if the output is only available at sparse locations, interpolation becomes impractical. As explained in the paper, despite this challenge, our approach can address this scenario, albeit with a higher computational cost for training the machine learning model (since, in such cases, the fixed structure of the data cannot be fully leveraged).
+Regarding the availability of data for the output function, we encounter two scenarios. In the first scenario, the functions in the output are known at the same fixed grid ${y_1, y_2,\dots,y_{n}}$, where $y_i \in Y$; this case is termed as "aligned" data. Conversely, there are cases where the output grid may vary randomly for each input function, known as "unaligned" data. If this grid is uniformly sampled and dense enough, interpolation can be used to approximate the output function at fixed locations. Thus, this leads us back to the aligned data case. However, if the output is only available at sparse locations, interpolation becomes impractical. As explained in the paper, despite this challenge, our approach can address this scenario, albeit with a higher computational cost for training the machine learning model (since, in such cases, the fixed structure of the data cannot be fully leveraged).
 
 Documentation of the Code
 =====
