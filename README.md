@@ -38,10 +38,10 @@ Here, we provide 5 examples/demos:
 
 Description of the Problem
 ========
-In this study, we focus on the challenging task of learning linear and nonlinear functional operators $\mathcal{F}:\mathsf{U} \rightarrow \mathsf{V}$ which constitute maps between two infinite-dimensional function spaces $\mathsf{U}$ and $\mathsf{V}$. Here, for simplicity, we consider both $\mathsf{U}$ and $\mathsf{V}$ to be subsets of the set $\mathsf{C}(\mathbb{R}^d)$ of continuous functions on $\mathbb{R}^d$. The elements of the set $\mathsf{U}$ are functions $u:\mathsf{X}\subseteq \mathbb{R}^d \rightarrow \mathbb{R}$ that are transformed to other functions $v=\mathcal{F}[u]:\mathsf{Y}\subseteq \mathbb{R}^d \in \mathbb{R}$ through the application of the operator $\mathcal{F}$. We use the following notation for an operator evaluated at a location $<strong>y</strong> \in \mathsf{Y}\subseteq \mathbb{R}^d$
-$$
-    v(<strong>y</strong>)=\mathcal{F}[u](<strong>y</strong>).
-$$
+In this study, we focus on the challenging task of learning linear and nonlinear functional operators $\mathcal{F}:\mathsf{U} \rightarrow \mathsf{V}$ which constitute maps between two infinite-dimensional function spaces $\mathsf{U}$ and $\mathsf{V}$. Here, for simplicity, we consider both $\mathsf{U}$ and $\mathsf{V}$ to be subsets of the set $\mathsf{C}(\mathbb{R}^d)$ of continuous functions on $\mathbb{R}^d$. The elements of the set $\mathsf{U}$ are functions $u:\mathsf{X}\subseteq \mathbb{R}^d \rightarrow \mathbb{R}$ that are transformed to other functions $v=\mathcal{F}[u]:\mathsf{Y}\subseteq \mathbb{R}^d \in \mathbb{R}$ through the application of the operator $\mathcal{F}$. We use the following notation for an operator evaluated at a location $ <strong>y</strong> \in \mathsf{Y}\subseteq \mathbb{R}^d $
+
+$$ v(<strong>y</strong>)=\mathcal{F}[u](<strong>y</strong>). $$
+
 These operators play a pivotal role in various scientific and engineering applications, particularly in the context of (partial) differential equations.
 By effectively learning (discovering from data) such nonlinear operators, we seek to enhance our understanding and predictive capabilities in diverse fields, ranging from fluid dynamics and materials science to financial and biological systems and beyond.
 
