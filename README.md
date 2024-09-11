@@ -29,12 +29,13 @@ Matlab Examples
 
 The main function (i.e. the training) is train_RandONet.m
 
-Here, we provide 5 examples/demos:
-1) The antiderivative problem (main_RandDeepOnet_AntiDerivative.m) [as proposed in deepxde python library]
-2) The pendulum  (main_RandDeepOnet_pendulum.m) [as proposed in deepxde python library]
-3) Linear PDE Diffusion-Reaction (main_RandDeepOnet_DiffReac.m)
-4) Nonlinear PDE Viscous Burgers' Equation (main_RandDeepOnet_burgers.m)
-5) Nonlinear PDE Allen-Cahn Equation (main_RandDeepOnet_AllenCahn.m)
+Here, we provide 5 examples/demos in the file main_RandDeepOnet_examples.m:
+
+1) The antiderivative problem (load('data_antiderivative.mat')) [as proposed in deepxde python library]
+2) The pendulum with external force  (load('data_Pendulum.mat')) [as proposed in deepxde python library]
+3) Linear PDE Diffusion-Reaction (load('data_DiffReac.mat'))
+4) Nonlinear PDE Viscous Burgers' equation (load('data_burgers.mat'))
+5) Nonlinear PDE Allen-Cahn equation (load('data_AllenCahn.mat'))
 
 Description of the Problem
 ========
