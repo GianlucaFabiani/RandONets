@@ -17,6 +17,8 @@ Keywords: RandONets - Machine Learning - Random Projections  - Shallow Neural Ne
 DISCLAIMER:
 This software is provided "as is" without warranty of any kind.
 
+<img src="https://raw.githubusercontent.com/GianlucaFabiani/RandONets/main/images/Schematic_RandOnet_details_colored.jpg" alt="Schematic of RandOnet" width="600"/>
+
 Abstract
 =====
 Deep neural networks have been extensively used for the solution of both the forward and the inverse problem for dynamical systems. However, their implementation necessitates optimizing a high-dimensional space of parameters and hyperparameters. This fact, along with the requirement of substantial computational resources, pose a barrier to achieving high numerical accuracy, but also interpretability.
