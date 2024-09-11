@@ -60,19 +60,25 @@ Syntax:
 net = **train_RandONet**(ff, yy, Nt, Nb, kmodel)
 
 Inputs:
+
 ff: Input matrix (functions) for the branch network.
 yy: Input vector (spatial locations) for the trunk network.
 G: Input matrix (transformed functions Gf).
 Nt: Number of neurons in the trunk network (default: 200).
 Nb: Number of neurons in the branch network (default: 1000).
 kmodel: Model type (1 for JL, 2 for RFFN; default: 2).
+
 Output:
+
 net: Trained RandONet model, which contains fields for the trunk and branch networks, including weights and biases.
+
 Structure of the net:
+
 tr_fT: Trunk network activation function (nonlinear transformation).
 tr_fB: Branch network activation function (nonlinear transformation).
 alphat, betat: Parameters for input transformation in the trunk network.
 alphab, betab: Parameters for input transformation in the branch network.
 C: Weight matrix for the inner product.
+
 Description:
 The function initializes network parameters and trains using COD-based pseudo-inverse of the trunk and branch layers, with the results stored in the output net.
