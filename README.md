@@ -19,10 +19,10 @@ This software is provided "as is" without warranty of any kind.
 
 Abstract
 =====
-Deep neural networks have been extensively used for the solution of both the forward and the inverse problem for dynamical systems. However, their implementation necessitates optimizing a high-dimensional space of parameters and hyperparameters. This fact, along with the requirement of substantial computational resources, poses a barrier to achieving high numerical accuracy.
-Here, to address the above challenges, we present Random Projection-based Operator Networks (RandONets): shallow networks with random projections and niche numerical analysis algorithms that learn linear and nonlinear operators. The implementation of RandONets involves: (a) incorporating random bases, thus enabling the use of shallow neural networks with a single hidden layer, where the only unknowns are the output weights of the network's weighted inner product; this reduces dramatically the dimensionality of the parameter space; and, based on this, (b) using niche numerical analysis techniques to solve a least-squares problem (e.g., Tikhonov regularization and preconditioned QR decomposition) that offer superior numerical approximation properties compared to other optimization techniques used in deep-learning.
-In addition, we prove the universal approximation accuracy of RandONets for approximating linear and nonlinear operators. Furthermore, we demonstrate their efficiency in approximating linear and nonlinear evolution operators (right-hand-sides (RHS)) with a focus on PDEs. 
-We show, that for this particular task, RandONets outperform both in terms of numerical approximation accuracy and computational cost, by several orders of magnitudes (~10 orders of magnitudes, up to machine precision) the ``vanilla" DeepONets. Hence, we believe that our method will trigger further developments in the field of scientific machine learning, for the development of new `'light'' machine learning schemes that will provide high accuracy while reducing dramatically the computational costs.
+Deep neural networks have been extensively used for the solution of both the forward and the inverse problem for dynamical systems. However, their implementation necessitates optimizing a high-dimensional space of parameters and hyperparameters. This fact, along with the requirement of substantial computational resources, pose a barrier to achieving high numerical accuracy, but also interpretability.
+Here, to address the above challenges, we present Random Projection-based Operator Networks (RandONets): shallow networks with random projections and niche numerical analysis algorithms that learn linear and nonlinear operators. The implementation of RandONets involves: (a) incorporating random bases, thus enabling the use of shallow neural networks with a single hidden layer, where the only unknowns are the output weights of the network's weighted inner product; this reduces dramatically the dimensionality of the parameter space; and, based on this, (b) using niche numerical analysis techniques to solve a linear ill-posed problem with regularization (e.g., Tikhonov regularization and preconditioned QR decomposition). 
+In addition, we prove the universal approximation accuracy of RandONets for approximating linear and nonlinear operators. Furthermore, we demonstrate their efficiency in approximating linear and nonlinear evolution operators (right-hand-sides (RHS)) with a focus on PDEs. We also note that due to their simplicity, RandONets provide a one-step transformation of the input space, facilitating the interpretability.
+We show, that for this particular task, RandONets outperform both in terms of numerical approximation accuracy and computational cost, by several orders of magnitudes the ``vanilla" DeepONets. Hence, we believe that our method will trigger further developments in the field of scientific machine learning, for the development of new "light'' machine learning schemes that will provide high accuracy while reducing dramatically the computational costs.
 
 Matlab Examples
 ==========
@@ -61,24 +61,25 @@ net = **train_RandONet**(ff, yy, Nt, Nb, kmodel)
 
 Inputs:
 
-ff: Input matrix (functions) for the branch network.
-yy: Input vector (spatial locations) for the trunk network.
-G: Input matrix (transformed functions Gf).
-Nt: Number of neurons in the trunk network (default: 200).
-Nb: Number of neurons in the branch network (default: 1000).
-kmodel: Model type (1 for JL, 2 for RFFN; default: 2).
+* ff: Input matrix (functions) for the branch network.
+* yy: Input vector (spatial locations) for the trunk network.
+* G: Input matrix (transformed functions Gf).
+* Nt: Number of neurons in the trunk network (default: 200).
+* Nb: Number of neurons in the branch network (default: 1000).
+* kmodel: Model type (1 for JL, 2 for RFFN; default: 2).
 
 Output:
 
-net: Trained RandONet model, which contains fields for the trunk and branch networks, including weights and biases.
+* net: Trained RandONet model, which contains fields for the trunk and branch networks, including weights and biases.
 
 Structure of the net:
 
-tr_fT: Trunk network activation function (nonlinear transformation).
-tr_fB: Branch network activation function (nonlinear transformation).
-alphat, betat: Parameters for input transformation in the trunk network.
-alphab, betab: Parameters for input transformation in the branch network.
-C: Weight matrix for the inner product.
+* tr_fT: Trunk network activation function (nonlinear transformation).
+* tr_fB: Branch network activation function (nonlinear transformation).
+* alphat, betat: Parameters for input transformation in the trunk network.
+* alphab, betab: Parameters for input transformation in the branch network.
+* C: Weight matrix for the inner product.
 
 Description:
+
 The function initializes network parameters and trains using COD-based pseudo-inverse of the trunk and branch layers, with the results stored in the output net.
