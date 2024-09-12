@@ -21,6 +21,19 @@
 % The function transforms the inputs using the trunk and branch networks, and
 % computes the result by applying the weight matrix C to the inner product of
 % these transformations.
+%
+% DISCLAIMER: This software is provided "as is" without warranty of any kind.
+% This includes, but is not limited to, warranties of merchantability,
+% fitness for a particular purpose, and non-infringement.
+% The authors and copyright holders are not liable for any claims, damages,
+% or other liabilities arising from the use of this software.
+%
+%Copyright (c) 2024 Gianluca Fabiani
+%
+%Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+% You may not use this material for commercial purposes.
+% If you remix, transform, or build upon this material,
+% you must distribute your contributions under the same license as the original.
 
 function G=eval_RandONet(net,ff,yy)
 Tr=net.tr_fT(yy*net.alphat+net.betat); %trunk

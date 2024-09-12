@@ -24,6 +24,20 @@
 %
 % The function initializes network parameters, trains using COD-based pseudo-inverse 
 % of the trunk and branch layers, and stores the results in the output net.
+%
+% DISCLAIMER: This software is provided "as is" without warranty of any kind.
+% This includes, but is not limited to, warranties of merchantability,
+% fitness for a particular purpose, and non-infringement.
+% The authors and copyright holders are not liable for any claims, damages,
+% or other liabilities arising from the use of this software.
+%
+%Copyright (c) 2024 Gianluca Fabiani
+%
+%Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+% You may not use this material for commercial purposes.
+% If you remix, transform, or build upon this material,
+% you must distribute your contributions under the same license as the original.
+
 function net=train_RandONet(ff,yy,G,Nt,Nb,kmodel)
 %check arguments %basic selection
 if nargin==3
