@@ -23,9 +23,17 @@ The authors and copyright holders are not liable for any claims, damages, or oth
 
 Copyright (c) 2024 Gianluca Fabiani
 
-Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+
+Licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
 You may not use this material for commercial purposes.
 If you remix, transform, or build upon this material, you must distribute your contributions under the same license as the original.
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
+
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
+[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
+
 
 Abstract
 =====
