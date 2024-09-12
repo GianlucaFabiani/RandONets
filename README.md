@@ -65,7 +65,7 @@ Inputs:
 
 * ff: Input matrix (functions) for the branch network.
 * yy: Input vector (spatial locations) for the trunk network.
-* G: Input matrix (transformed functions Gf).
+* G: Input matrix (transformed functions G(ff) ).
 * Nt: Number of neurons in the trunk network (default: 200).
 * Nb: Number of neurons in the branch network (default: 1000).
 * kmodel: Model type (1 for JL, 2 for RFFN; default: 2).
