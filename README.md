@@ -17,7 +17,15 @@ The efficiency of the scheme is compared against [DeepXDE/DeepOnet python librar
 Keywords: RandONets - Machine Learning - Random Projections  - Shallow Neural Networks -  Approximation of Linear and Nonlinear Operators - Differential Equations - Evolution Operators - DeepONet - Numerical Analysis
 
 DISCLAIMER:
-This software is provided "as is" without warranty of any kind.
+This software is provided "as is" without warranty of any kind., without any express or implied warranties.
+This includes, but is not limited to, warranties of merchantability, fitness for a particular purpose, and non-infringement.
+The authors and copyright holders are not liable for any claims, damages, or other liabilities arising from the use of this software
+
+Copyright (c) 2024 Gianluca Fabiani
+
+Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+You may not use this material for commercial purposes.
+If you remix, transform, or build upon this material, you must distribute your contributions under the same license as the original.
 
 Abstract
 =====
@@ -85,3 +93,5 @@ Structure of the net:
 Description:
 
 The function initializes network parameters and trains using COD-based pseudo-inverse of the trunk and branch layers, with the results stored in the output net.
+
+
