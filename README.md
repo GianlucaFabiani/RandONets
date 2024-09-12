@@ -16,7 +16,7 @@ The efficiency of the scheme is compared against [DeepXDE/DeepOnet python librar
 
 Keywords: RandONets - Machine Learning - Random Projections  - Shallow Neural Networks -  Approximation of Linear and Nonlinear Operators - Differential Equations - Evolution Operators - DeepONet - Numerical Analysis
 
-DISCLAIMER:
+**DISCLAIMER**:
 This software is provided "as is" without warranty of any kind., without any express or implied warranties.
 This includes, but is not limited to, warranties of merchantability, fitness for a particular purpose, and non-infringement.
 The authors and copyright holders are not liable for any claims, damages, or other liabilities arising from the use of this software
@@ -90,8 +90,31 @@ Structure of the net:
 * alphab, betab: Parameters for input transformation in the branch network.
 * C: Weight matrix for the inner product.
 
-Description:
+**Description**:
 
 The function initializes network parameters and trains using COD-based pseudo-inverse of the trunk and branch layers, with the results stored in the output net.
+
+--------
+
+**eval_RandONet** evaluates a Random projection-based Operator Network (RandONet) model by computing the weighted inner product between the trunk and branch networks.
+
+Syntax: G = **eval_RandONet**(net, ff, yy)
+
+Inputs:
+  * net : Structure containing the parameters of the RandONet model.
+
+Fields include:
+    - tr_fT : Trunk network activation function (nonlinear transformation).
+    - tr_fB : Branch network activation function (nonlinear transformation).
+    - alphat, betat : Parameters for input transformation in the trunk network.
+    - alphab, betab : Parameters for input transformation in the branch network.
+    - C : Weight matrix for the inner product.
+    - ff  : Input function for the branch network.
+    - yy  : Input spatial locations for the trunk network.
+
+Output:
+  - G : Output of the RandONet model, computed as the weighted inner product of the trunk and branch networks, i.e., <T, B>_C.
+
+The function transforms the inputs using the trunk and branch networks, and computes the result by applying the weight matrix C to the inner product of these transformations.
 
 
