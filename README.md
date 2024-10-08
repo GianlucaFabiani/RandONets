@@ -1,7 +1,7 @@
 # RandONets MATLAB TOOLBOX
 RandONets - MATLAB Code (J. Comp. Phys).  RandONets (Random projection-based Operator Networks) is a MATLAB implementation designed for learning efficiently linear and nonlinear operators using randomized neural networks.
 
-__If you use or modify for research purposes this software, please cite our paper as below:__
+*If you use or modify for research purposes this software, please cite our paper as below:*
 
 &#x1F4D8;**Fabiani, G., Kevrekidis, I. G., Siettos, C., Yannacopoulos, A. N., RandONets: Shallow Networks with Random Projections for learning linear and nonlinear operators. J Comp Phys 520, 113433, (2025)**
 open access paper at: https://doi.org/10.1016/j.jcp.2024.113433
