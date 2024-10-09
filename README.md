@@ -19,7 +19,7 @@ The efficiency of the scheme is compared against [DeepXDE/DeepOnet python librar
 Keywords: RandONets - Machine Learning - Random Projections  - Shallow Neural Networks -  Approximation of Linear and Nonlinear Operators - Differential Equations - Evolution Operators - DeepONet - Numerical Analysis
 
 **DISCLAIMER**:
-This software is provided "as is" without warranty of any kind., without any express or implied warranties.
+This software is provided "as is" without any express or implied warranties.
 This includes, but is not limited to, warranties of merchantability, fitness for a particular purpose, and non-infringement.
 The authors and copyright holders are not liable for any claims, damages, or other liabilities arising from the use of this software
 
